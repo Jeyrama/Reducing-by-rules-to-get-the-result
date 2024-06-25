@@ -27,3 +27,10 @@ Every rule takes always two input parameters.
 
 
 // Solution
+
+function reduceByRules(numbers, rules)
+{
+  return numbers.reduce((output, number, index) => {
+    return rules[(index - 1) % rules.length](output, number);
+  });
+}
