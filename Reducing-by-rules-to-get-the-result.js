@@ -34,3 +34,5 @@ function reduceByRules(numbers, rules)
     return rules[(index - 1) % rules.length](output, number);
   });
 }
+
+// or
