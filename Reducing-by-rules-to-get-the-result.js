@@ -36,3 +36,7 @@ function reduceByRules(numbers, rules)
 }
 
 // or
+
+const reduceByRules = (numbers, rules) =>
+  numbers.reduce((result, term, i) =>
+    rules[(i - 1) % rules.length](result, term))
